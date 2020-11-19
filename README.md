@@ -1,5 +1,5 @@
 # GetPaper
-Get paper is a software to download IEEE Xplore papers from a remote host.
+GetPaper is a software to download IEEE Xplore papers from a remote host.
 
 ## Installing dependencies
 
