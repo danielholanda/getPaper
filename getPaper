@@ -22,7 +22,7 @@ parser.add_argument('--host', dest='host', default=host,
                    help='Remote host you want to ssh into to download the papers')
 args = parser.parse_args()
 
-# Check whether the URL is from ACM or IEEE
+# Check whether the URL is from IEEE
 if "ieeexplore.ieee.org/document/" in args.URL:
 	paper_id = args.URL.split("document/")[1].split("/")[0]
 	association = 'IEEE'
