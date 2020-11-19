@@ -23,7 +23,7 @@ parser.add_argument('--host', dest='host', default=host,
 args = parser.parse_args()
 
 # Check whether the URL is from IEEE
-if "ieeexplore.ieee.org/document/" in args.URL:
+if "ieeexplore.ieee.org" in args.URL:
 	paper_id = args.URL.split("document/")[1].split("/")[0]
 	association = 'IEEE'
 else:
