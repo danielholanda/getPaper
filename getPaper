@@ -40,8 +40,8 @@ print("Connecting to "+args.username+"@"+args.host)
 child = pexpect.spawn("ssh "+args.username+"@"+args.host)
 child.expect('.*password: ')
 child.sendline(password)
-response = child.expect(['.*> ','\r\nPermission denied'])
-if response==1:
+response = child.expect(['\r\nPermission denied','.*> ','.*:~\$ '])
+if response==0:
 	print("Permission denied")
 	exit()
 print("Downloading "+association+" paper #"+paper_id)
